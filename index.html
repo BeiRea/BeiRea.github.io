@@ -156,6 +156,121 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-工作中的一些代码写法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Java的流的一些写法"><a href="#1-Java的流的一些写法" class="headerlink" title="1.Java的流的一些写法"></a>1.Java的流的一些写法</h4><h5 id="1-gt-去重"><a href="#1-gt-去重" class="headerlink" title="1&gt;去重"></a>1&gt;去重</h5><p>1）单个属性–定义一个自定义方法–也可以用第二种方法去解决</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;T&gt; Predicate&lt;T&gt; <span class="title function_">distinctByKey</span><span class="params">(Function&lt;? <span class="built_in">super</span> T, Object&gt; keyExtractor)</span> &#123;</span><br><span class="line">    Map&lt;Object, Boolean&gt; seen = <span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">return</span> t -&gt; seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;TestListToMap&gt; list1 = list.stream().filter(distinctByKey(x -&gt;x.getId())).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+<h5 id=""><a href="#" class="headerlink" title=""></a></h5><p>2)多个属性</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;SaleMaterialRelation&gt; twoList = oneList.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(      () -&gt; <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;(Comparator.comparing(x -&gt; x.getSaleMaterialNumber()            + <span class="string">&quot;#&quot;</span> + x.getElsAccount()))),      ArrayList::<span class="keyword">new</span>));</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-MP的一些写法"><a href="#2-MP的一些写法" class="headerlink" title="2.MP的一些写法"></a>2.MP的一些写法</h4><p>1.加括号的and或者or写法 （a !&#x3D; null or a &#x3D;&#x3D; 6）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">queryWrapper.and(q -&gt; &#123;q.isNull(<span class="string">&quot;fbk1&quot;</span>).or().ne(<span class="string">&quot;fbk1&quot;</span>, CommonConstant.YES);&#125;);</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/25/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BB%A3%E7%A0%81%E5%86%99%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-软件操作问题集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-IDEA显示端口被占用怎么解决"><a href="#1-IDEA显示端口被占用怎么解决" class="headerlink" title="1.IDEA显示端口被占用怎么解决"></a>1.IDEA显示端口被占用怎么解决</h4><p>1.查看端口号– netstat -ano | findstr 端口号 </p>
+<p>2.命令关闭自己所要占用的端口号– taskkill -PID 进程号 -F </p>
+<h4 id="2-windows系统下启动redis命令"><a href="#2-windows系统下启动redis命令" class="headerlink" title="2.windows系统下启动redis命令"></a>2.windows系统下启动redis命令</h4><p>1.进入redis的安装目录，每一个人的安装目录都不一样</p>
+<p>2.输入 <strong>redis-server.exe redis.windows.conf</strong> </p>
+<p>如成功显示</p>
+<p> <img src="https://img-blog.csdnimg.cn/20191128094919650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTMwMDA0,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>如失败显示： <strong>28 Nov 09:30:50.919 # Creating Server TCP listening socket 127.0.0.1:6379: bind: No error</strong> </p>
+<p> <img src="https://img-blog.csdnimg.cn/20191128094539901.png" alt="img"> </p>
+<p>解决办法</p>
+<p>依次输入 -<strong>redis-cli.exe</strong> –shutdown –<strong>exit</strong> –<strong>redis-server.exe redis.windows.conf</strong>  </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/25/%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-First-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
