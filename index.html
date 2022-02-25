@@ -156,13 +156,110 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-工作中的一些代码写法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-软件操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/25/%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C/">软件操作</a>
+    </h1>
+  
+
+        
+        <a href="/2022/02/25/%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2022-02-25T07:14:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-25</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: 工作中的一些代码写法<br>date: 2022-02-25 13:01:20<br>tags: ggg</p>
-<h4 id="1-Java的流的一些写法"><a href="#1-Java的流的一些写法" class="headerlink" title="1.Java的流的一些写法"></a>1.Java的流的一些写法</h4><h5 id="1-gt-去重"><a href="#1-gt-去重" class="headerlink" title="1&gt;去重"></a>1&gt;去重</h5><p>1）单个属性–定义一个自定义方法–也可以用第二种方法去解决</p>
+        <h4 id="1-IDEA显示端口被占用怎么解决"><a href="#1-IDEA显示端口被占用怎么解决" class="headerlink" title="1.IDEA显示端口被占用怎么解决"></a>1.IDEA显示端口被占用怎么解决</h4><p>1.查看端口号– netstat -ano | findstr 端口号 </p>
+<p>2.命令关闭自己所要占用的端口号– taskkill -PID 进程号 -F </p>
+<h4 id="2-windows系统下启动redis命令"><a href="#2-windows系统下启动redis命令" class="headerlink" title="2.windows系统下启动redis命令"></a>2.windows系统下启动redis命令</h4><p>1.进入redis的安装目录，每一个人的安装目录都不一样</p>
+<p>2.输入 <strong>redis-server.exe redis.windows.conf</strong> </p>
+<p>如成功显示</p>
+<p> <img src="https://img-blog.csdnimg.cn/20191128094919650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTMwMDA0,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>如失败显示： <strong>28 Nov 09:30:50.919 # Creating Server TCP listening socket 127.0.0.1:6379: bind: No error</strong> </p>
+<p> <img src="https://img-blog.csdnimg.cn/20191128094539901.png" alt="img"> </p>
+<p>解决办法</p>
+<p>依次输入 -<strong>redis-cli.exe</strong> –shutdown –<strong>exit</strong> –<strong>redis-server.exe redis.windows.conf</strong>  </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">soft</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/25/%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-代码写法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/25/%E4%BB%A3%E7%A0%81%E5%86%99%E6%B3%95/">代码写法</a>
+    </h1>
+  
+
+        
+        <a href="/2022/02/25/%E4%BB%A3%E7%A0%81%E5%86%99%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2022-02-25T07:14:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Java的流的一些写法"><a href="#1-Java的流的一些写法" class="headerlink" title="1.Java的流的一些写法"></a>1.Java的流的一些写法</h4><h5 id="1-gt-去重"><a href="#1-gt-去重" class="headerlink" title="1&gt;去重"></a>1&gt;去重</h5><p>1）单个属性–定义一个自定义方法–也可以用第二种方法去解决</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;T&gt; Predicate&lt;T&gt; <span class="title function_">distinctByKey</span><span class="params">(Function&lt;? <span class="built_in">super</span> T, Object&gt; keyExtractor)</span> &#123;</span><br><span class="line">    Map&lt;Object, Boolean&gt; seen = <span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">return</span> t -&gt; seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;TestListToMap&gt; list1 = list.stream().filter(distinctByKey(x -&gt;x.getId())).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
@@ -181,133 +278,12 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/25/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BB%A3%E7%A0%81%E5%86%99%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-软件操作问题集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>title: 软件操作问题集合<br>date: 2022-02-26 13:01:20<br>tags: ggg</p>
-<h4 id="1-IDEA显示端口被占用怎么解决"><a href="#1-IDEA显示端口被占用怎么解决" class="headerlink" title="1.IDEA显示端口被占用怎么解决"></a>1.IDEA显示端口被占用怎么解决</h4><p>1.查看端口号– netstat -ano | findstr 端口号 </p>
-<p>2.命令关闭自己所要占用的端口号– taskkill -PID 进程号 -F </p>
-<h4 id="2-windows系统下启动redis命令"><a href="#2-windows系统下启动redis命令" class="headerlink" title="2.windows系统下启动redis命令"></a>2.windows系统下启动redis命令</h4><p>1.进入redis的安装目录，每一个人的安装目录都不一样</p>
-<p>2.输入 <strong>redis-server.exe redis.windows.conf</strong> </p>
-<p>如成功显示</p>
-<p> <img src="https://img-blog.csdnimg.cn/20191128094919650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTMwMDA0,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>如失败显示： <strong>28 Nov 09:30:50.919 # Creating Server TCP listening socket 127.0.0.1:6379: bind: No error</strong> </p>
-<p> <img src="https://img-blog.csdnimg.cn/20191128094539901.png" alt="img"> </p>
-<p>解决办法</p>
-<p>依次输入 -<strong>redis-cli.exe</strong> –shutdown –<strong>exit</strong> –<strong>redis-server.exe redis.windows.conf</strong>  </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/25/%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-First-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/19/First-Blog/">First Blog</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/19/First-Blog/" class="archive-article-date">
-  	<time datetime="2022-02-19T05:01:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我真的好开心呀！终于搭建完成！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ggg</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
         		</li>
       		
 		</ul>
@@ -317,82 +293,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/19/First-Blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/19/hello-world/" class="archive-article-date">
-  	<time datetime="2022-02-18T16:45:16.168Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/19/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/02/25/%E4%BB%A3%E7%A0%81%E5%86%99%E6%B3%95/">展开全文 >></a>
         </p>
       
 
@@ -511,7 +412,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ggg</a>
+                <a href="javascript:void(0)" class="js-tag color5">Code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">soft</a>
               </li>
             
             <div class="clearfix"></div>
